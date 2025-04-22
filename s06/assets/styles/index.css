@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto;
+}
+
+.container {
+  width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.row {
+  display: flex;
+}
+.col {
+  border: solid 1px red;
+}
+
+#hero {
+  /* background-image: url("./../images/images.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: #4062bb; */
+  /* background: url("./../images/images.jpeg") no-repeat center / contain #4062bb; */
+  /* background: radial-gradient(red, green) ; */
+  background: linear-gradient(140deg, #4062bb 40%, #59c3c3 110%);
+  height: 649px;
+  color: white;
+}
+
+#hero .image-wrapper {
+  padding-top: 154px;
+  order: 1;
+}
+
+#hero .text-wrapper {
+  flex-grow: 1;
+  padding-top: 231px;
+}
+
+#hero h1 {
+  font-size: 48px;
+  line-height: 44px;
+  font-weight: 400;
+  font-family: Lalezar;
+  margin: 0;
+  width: 452px;
+}
+#hero p {
+  font-size: 19px;
+  font-weight: 400;
+  margin: 0;
+  width: 452px;
+}
+
+#hero ul {
+  margin: 6px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+#mags {
+  background-color: #f2f7f8;
+}
+#mags .row {
+  align-items: center;
+}
+#mags h2 {
+  margin: 35px 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  color: rgba(0, 0, 0, 0.14);
+}
+#mags ul {
+  padding: 0 25px;
+  margin: 0;
+  list-style: none;
+  gap: 50px;
+}

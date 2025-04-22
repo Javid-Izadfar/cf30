@@ -1,0 +1,276 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Vazirmatn", sans-serif;
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+h2 {
+  font-family: "Lalezar";
+  font-size: 48px;
+  font-weight: 400;
+  color: #040202;
+  text-align: center;
+}
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 12px 0;
+  z-index: 99;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0 -6px;
+  gap: 12px;
+}
+header nav ul a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+  padding: 6px;
+  display: block;
+}
+
+#hero {
+  margin-top: 127px;
+  position: relative;
+  margin-right: -18px;
+  margin-left: -47px;
+}
+#hero h1 {
+  font-family: "Lalezar";
+  font-weight: 400;
+  font-size: 300px;
+  line-height: 300px;
+  color: #346e16;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+}
+
+#hero .intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#hero ul {
+  list-style: none;
+  padding: 0 12px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 250px;
+}
+#hero ul li {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  color: black;
+}
+#hero ul .img-wrapper {
+  background: #040202;
+  padding: 14px;
+  border-radius: 50%;
+}
+#hero ul span {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+}
+#hero ul p {
+  font-size: 12px;
+  line-height: 1;
+  opacity: 40%;
+  font-weight: 400;
+  margin: 0;
+}
+
+#hero .cta p {
+  font-size: 28px;
+  height: 44px;
+  color: black;
+  opacity: 40%;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+#hero .cta a {
+  background-color: 040202;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  gap: 12px;
+}
+
+#hero .cta a img {
+  display: block;
+}
+
+#hero .illustrations {
+  position: absolute;
+  top: 71px;
+  right: 405px;
+  width: 500px;
+  height: 500px;
+}
+#hero .illustrations.back {
+  background: #f4b10d;
+  border-radius: 50%;
+  z-index: 1;
+}
+#hero .illustrations.front {
+  z-index: 3;
+}
+
+#hero .illustrations .bottle {
+  position: absolute;
+  top: -86px;
+  right: 144px;
+  z-index: 1;
+}
+#hero .illustrations .kiwi {
+  position: absolute;
+  bottom: 40px;
+  right: 110px;
+  z-index: 3;
+  transform: rotate(18deg);
+}
+#hero .illustrations .lemon_wedge {
+  position: absolute;
+  top: 168px;
+  right: 60px;
+  z-index: 2;
+  transform: rotate(-18deg);
+}
+#hero .illustrations .mint {
+  position: absolute;
+  top: 88px;
+  right: 290px;
+  z-index: 2;
+  transform: rotate(-8deg);
+}
+#hero .illustrations .lemon {
+  opacity: 20%;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+#hero .illustrations .lime {
+  position: absolute;
+  top: 110px;
+  right: 250px;
+}
+
+#flavors {
+  margin-top: 180px;
+}
+#flavors h2 {
+  padding-bottom: 24px;
+}
+
+#flavors .wrapper {
+  background: #040202;
+  border-radius: 90px;
+}
+
+#flavors ul {
+  padding: 0;
+  margin: 75px 0 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 75px;
+  transform: translateY(-75px);
+}
+#flavors ul li {
+  color: white;
+  width: 33.3333%;
+  padding: 0 95px;
+  text-align: center;
+}
+#flavors ul li .img-wrapper {
+  display: inline-flex;
+  background-color: #346e16;
+  padding: 25px;
+  border-radius: 50%;
+}
+#flavors ul li .title {
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 600;
+}
+#flavors ul li p {
+  font-size: 14px;
+  margin-bottom: 0;
+  font-weight: 400;
+  opacity: 60%;
+}
+
+#sellers {
+  margin-top: 160px;
+}
+
+#sellers ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  row-gap: 50px;
+  column-gap: 163px;
+  justify-content: space-evenly;
+}
+
+#sellers ul li {
+  width: 278px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#sellers ul li img {
+  margin: auto;
+  object-fit: contain;
+}
+
+footer {
+  margin-top: 129px;
+  margin-bottom: 32px;
+  text-align: center;
+  font-weight: 14px;
+  font-weight: 400;
+}

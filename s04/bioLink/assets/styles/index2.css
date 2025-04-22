@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #2a8260;
+  text-align: center;
+  color: #f3f4f9;
+  margin: 0;
+  font-family: Roboto;
+}
+
+.container {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Profile */
+.profile-wrapper {
+  margin-top: 59px;
+}
+.profile-image {
+  border-radius: 50%;
+  border: solid 1px #f3f4f9;
+}
+.profile-title {
+  margin-top: 11px;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1;
+}
+.profile-subtitle {
+  color: #79b39d;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Socials */
+.socials-wrapper {
+  margin-top: 20px;
+}
+.socials-list {
+  margin: 0;
+  padding: 0;
+}
+.socials-item {
+  display: inline-block;
+  margin: 0 10px -4px;
+}
+.socials-link,
+.socials-img {
+  display: block;
+}
+
+/* Contacts */
+.contacts-wrapper {
+  margin-top: 40px;
+}
+.contacts-table {
+  width: 100%;
+  margin: auto;
+}
+.contacts-label,
+.contacts-value {
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 400;
+  padding: 10px;
+}
+.contacts-label {
+  text-align: left;
+}
+.contacts-value {
+  text-align: right;
+}
+
+/* Button */
+.button-wrapper {
+  margin-top: 240px;
+}
+.button-link {
+  background-color: #243b48;
+  border-radius: 12px;
+  display: block;
+  color: #f3f4f9;
+  text-decoration: none;
+  margin: auto;
+  padding: 14px 0 16px;
+  font-size: 14px;
+  line-height: 1;
+}

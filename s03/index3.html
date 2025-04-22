@@ -1,0 +1,61 @@
+<html lang="en" dir="ltr">
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      section {
+        margin: 20px 20px;
+      }
+      .block {
+        background-color: orange;
+        color: green;
+        display: block;
+        height: 50px;
+      }
+      .inline {
+        background-color: green;
+        color: orange;
+        display: inline;
+        height: 50px;
+      }
+      .inline-block {
+        background-color: purple;
+        color: white;
+        display: inline-block;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="block">block</div>
+      <span class="inline">inline</span>
+      <span class="inline">inline</span>
+      <span class="inline">inline</span>
+    </section>
+    <section>
+      <div class="inline">change display to inline</div>
+      <div class="inline">change display to inline</div>
+      <span class="block">change display to block</span>
+      <span class="inline-block">change display to inline-block</span>
+      <div class="inline-block">change display to inline-block</div>
+    </section>
+    <section>
+      <ul>
+        <li class="block">1</li>
+        <li class="block">2</li>
+        <li class="block">3</li>
+        <li class="block">4</li>
+      </ul>
+    </section>
+    <section>
+      <ul>
+        <li class="inline">1</li>
+        <li class="inline">2</li>
+        <li class="inline">3</li>
+        <li class="inline">4</li>
+      </ul>
+    </section>
+  </body>
+</html>

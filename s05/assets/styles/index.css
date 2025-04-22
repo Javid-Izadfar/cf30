@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+}
+
+.container {
+  width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.red {
+  background-color: red;
+}
+.blue {
+  background-color: blue;
+}
+
+a.button {
+  color: white;
+  text-decoration: none;
+  background-color: #d8460b;
+  border-radius: 12px;
+  font-size: 18px;
+  padding: 12px 24px;
+  display: inline-block;
+}
+
+header {
+  margin-top: 36px;
+}
+header nav {
+  display: inline-block;
+  width: 60%;
+}
+
+header .btn-wrapper {
+  text-align: right;
+  display: inline-block;
+  width: 39%;
+}
+header nav ul {
+  padding: 0;
+  margin: 0;
+}
+header nav li {
+  display: inline-block;
+}
+header nav a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 16px 12px;
+}
+
+.hero {
+  background-color: rgba(242, 98, 79, 1);
+  border-radius: 40px;
+  color: white;
+  margin: 80px 0;
+}
+.hero-image-wrapper {
+  display: inline-block;
+  width: 406px;
+  vertical-align: top;
+  padding: 16px 12px 0;
+}
+.hero-text-wrapper {
+  display: inline-block;
+  width: 570px;
+  vertical-align: top;
+  padding: 121px 12px 0 32px;
+}
+.hero-title {
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 900;
+  margin-bottom: 24px;
+  margin-top: 0;
+}
+.hero-text {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+#ready-section {
+  background-color: #f9f2db;
+  margin: 24px 0;
+}

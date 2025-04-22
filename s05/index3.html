@@ -1,0 +1,100 @@
+<html lang="en">
+  <head>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: gray;
+      }
+      .row {
+        display: flex;
+      }
+      .row.red {
+        background-color: red;
+        flex-wrap: nowrap;
+      }
+      .row.blue {
+        background-color: blue;
+        flex-wrap: wrap;
+      }
+      .box {
+        padding: 6px;
+        background-color: rgba(255, 255, 255, 0.858);
+        border-radius: 2px;
+      }
+      .row.red .box,
+      .row.blue .box,
+      .purple .box {
+        width: 100px;
+      }
+
+      .row.green {
+        background-color: green;
+      }
+      .row.orange {
+        background-color: orange;
+      }
+      .o-1 {
+        order: 1;
+      }
+      .o-2 {
+        order: 1;
+      }
+      .grow-1 {
+        background: pink;
+        flex-grow: 1;
+      }
+      .grow-2 {
+        background: aqua;
+        flex-grow: 2;
+      }
+      .purple {
+        background-color: purple;
+      }
+      .foo {
+        flex-shrink: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="width: 400px">
+      <div class="row red">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+      </div>
+      <div class="row blue">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+      </div>
+
+      <div class="row green">
+        <div class="box o-2">1</div>
+        <div class="box o-1">2</div>
+        <div class="box">3</div>
+        <div class="box o-1">4</div>
+        <div class="box">5</div>
+      </div>
+      <div class="row orange">
+        <div class="box">1</div>
+        <div class="box grow-1">2</div>
+        <div class="box grow-2">3</div>
+        <div class="box grow-1">4</div>
+        <div class="box">5</div>
+      </div>
+      <div class="row purple">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box foo">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+      </div>
+    </div>
+  </body>
+</html>

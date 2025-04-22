@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto;
+
+  height: 300vh;
+}
+
+.container {
+  width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.row {
+  display: flex;
+}
+.col {
+  border: solid 1px red;
+}
+
+.overflow .parent {
+  background-color: blue;
+  height: 300px;
+  padding: 0 12px;
+
+  /* overflow: scroll; */
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.overflow .child {
+  background: linear-gradient(red, green);
+  height: 50vh;
+  width: 10vw;
+}
+
+.position .parent {
+  height: 200px;
+  border: solid 2px blue;
+
+  position: relative;
+  right: 50px;
+  left: 0;
+}
+
+.position .child {
+  /* height: 100px;
+  width: 100px; */
+  border: solid 2px red;
+  background: rgba(255, 0, 0, 0.388);
+  position: absolute;
+  top: 120px;
+  left: 120px;
+  right: 10px;
+  bottom: 10px;
+  z-index: 2;
+}
+
+.position .grandchild {
+  /* height: 100px;
+  width: 100px; */
+  border: solid 2px blue;
+  background: rgba(0, 0, 255, 0.388);
+  position: absolute;
+  top: 120px;
+  left: 120px;
+  z-index: 2;
+}
+
+.position .foo {
+  /* height: 100px;
+  width: 100px; */
+  border: solid 2px green;
+  background: rgba(0, 255, 0, 0.388);
+  position: absolute;
+  top: 135px;
+  left: 135px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1;
+}
+
+.position .fixed {
+  height: 200px;
+  width: 200px;
+  border: solid 2px purple;
+  background: rgba(255, 0, 255, 0.388);
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 1;
+}
+
+.tooltip {
+  font-weight: bold;
+  position: relative;
+}
+
+.tooltip-extra {
+  font-weight: 400;
+  position: absolute;
+  background-color: black;
+  color: red;
+  padding: 4px 6px;
+  border-radius: 8px;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.tooltip:hover .tooltip-extra {
+  display: block;
+}
