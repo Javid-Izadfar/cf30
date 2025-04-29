@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 10px;
+      }
+      input {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div>
+        <label for="first_name">First Name</label>
+        <input
+          id="first_name"
+          name="first_name"
+          placeholder="please enter your name"
+          type="text"
+        />
+      </div>
+      <div>
+        <label for="phone">Phone Number</label>
+        <input id="phone" name="phone" type="text" />
+      </div>
+      <div>
+        <input
+          placeholder="please enter you age"
+          type="number"
+          min="10"
+          max="20"
+          step="2"
+        />
+      </div>
+      <div>
+        <textarea
+          placeholder="enter your comment"
+          rows="15"
+          cols="10"
+        ></textarea>
+      </div>
+      <!-- <div>
+        <input type="date" />
+      </div>
+      <div>
+        <input type="time" />
+      </div>
+      <div>
+        <input type="color" />
+      </div>
+      <div>
+        <input type="email" />
+      </div>
+      <div>
+        <input type="file" />
+      </div>
+      <div>
+        <input type="password" />
+      </div>
+       -->
+      <button>Submit</button>
+    </form>
+  </body>
+</html>
