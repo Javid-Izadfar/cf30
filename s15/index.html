@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodingFront - 30</title>
+    <style>
+      .with-padding {
+        background: red;
+        width: 200px;
+        position: relative;
+        overflow-y: auto;
+      }
+      .with-padding:after {
+        content: "";
+        background: rgba(0, 0, 255, 0.282);
+        display: block;
+        width: 100%;
+        padding-top: 100%;
+      }
+      .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .aspect-ratio {
+        background: green;
+        width: 200px;
+        aspect-ratio: 16 / 9;
+      }
+
+      .cat {
+        aspect-ratio: 370 / 200;
+        object-fit: cover;
+      }
+
+      picture {
+        display: block;
+      }
+
+      .mask {
+        mask-image: url("./carnival-mask-silhouette-svgrepo-com.svg");
+        mask-size: contain;
+        mask-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <p>A place to share codes in CodingFront Bootcamp 30</p>
+
+    <div class="with-padding">
+      <div class="content">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt
+        voluptate unde esse iusto magni recusandae nam reiciendis eius rerum?
+        Reiciendis consequatur facere ab ipsam, recusandae pariatur deserunt
+        expedita doloribus minima. Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. Incidunt voluptate unde esse iusto magni recusandae
+        nam reiciendis eius rerum? Reiciendis consequatur facere ab ipsam,
+        recusandae pariatur deserunt expedita doloribus minima.
+      </div>
+    </div>
+
+    <div class="aspect-ratio"></div>
+
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlVTWL4dqk9ZokaiRQe0kdV3_dNvkB7A3xTw&s"
+      alt=""
+      width="300"
+      class="cat"
+    />
+    <!-- 
+    <div>
+      <img
+        src="https://t4.ftcdn.net/jpg/02/66/72/41/360_F_266724172_Iy8gdKgMa7XmrhYYxLCxyhx6J7070Pr8.jpg"
+        alt=""
+        width="300"
+      />
+    </div>
+    <div>
+      <img
+        src="https://t3.ftcdn.net/jpg/02/36/99/22/360_F_236992283_sNOxCVQeFLd5pdqaKGh8DRGMZy7P4XKm.jpg"
+        alt=""
+        width="300"
+      />
+    </div> -->
+
+    <picture>
+      <source
+        media="(min-width: 700px)"
+        srcset="https://placehold.co/600x400/FF0000/png"
+      />
+      <img src="https://placehold.co/300x200/00FF00/png" alt="" width="300" />
+    </picture>
+
+    <div class="mask">
+      <img
+        src="https://t3.ftcdn.net/jpg/02/36/99/22/360_F_236992283_sNOxCVQeFLd5pdqaKGh8DRGMZy7P4XKm.jpg"
+        alt=""
+        width="300"
+      />
+    </div>
+  </body>
+</html>
