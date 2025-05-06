@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+
+.custom-checkbox {
+  background: lightblue;
+  padding: 12px;
+}
+
+:root {
+  --custom-checkbox-size: 30px;
+  --custom-checkbox-border-width: 2px;
+  --custom-checkbox-border-color: rgb(0, 0, 0);
+  --custom-checkbox-off-color: rgb(239, 45, 11);
+  --custom-checkbox-on-color: rgb(72, 234, 14);
+  --custom-checkbox-transition-duration: 200ms;
+}
+
+h2::selection {
+  background: green;
+  color: red;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.custom-checkbox label {
+  --bg-color: var(--custom-checkbox-off-color);
+  display: block;
+  color: white;
+  background: var(--bg-color);
+  width: calc(var(--custom-checkbox-size) * 2);
+  height: var(--custom-checkbox-size);
+  border-radius: calc(var(--custom-checkbox-size) / 2);
+  border: var(--custom-checkbox-border-width) solid
+    var(--custom-checkbox-border-color);
+  position: relative;
+  transition: background var(--custom-checkbox-transition-duration) ease-in-out;
+  cursor: pointer;
+}
+
+.custom-checkbox label:after {
+  --left: calc(var(--custom-checkbox-border-width) * -1);
+  content: "";
+  display: block;
+  border-radius: 50%;
+  transition: all var(--custom-checkbox-transition-duration) ease-in-out;
+  width: var(--custom-checkbox-size);
+  height: var(--custom-checkbox-size);
+  background: var(--custom-checkbox-border-color);
+  position: absolute;
+  left: var(--left);
+  top: calc(var(--custom-checkbox-border-width) * -1);
+}
+.custom-checkbox label .on,
+.custom-checkbox label .off {
+  user-select: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity var(--custom-checkbox-transition-duration) ease-in-out;
+}
+
+.custom-checkbox label .on {
+  opacity: 0;
+  left: calc(var(--custom-checkbox-size) / 6);
+}
+.custom-checkbox label .off {
+  right: calc(var(--custom-checkbox-size) / 6);
+}
+.custom-checkbox input:checked ~ label {
+  --bg-color: var(--custom-checkbox-on-color);
+}
+.custom-checkbox input:checked ~ label:after {
+  --left: var(--custom-checkbox-size);
+}
+
+.custom-checkbox input:checked ~ label .on {
+  opacity: 100%;
+}
+
+.custom-checkbox input:checked ~ label .off {
+  opacity: 0;
+}

@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+
+.grid-1 {
+  margin: 10px;
+  background: pink;
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px 100px 100px;
+}
+
+.grid-1 .item-1 {
+  background: red;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+.grid-1 .item-2 {
+  background: blue;
+}
+.grid-1 .item-3 {
+  background: green;
+  grid-row: 2 / 4;
+}
+.grid-1 .item-4 {
+  background: orange;
+  grid-row: 1 / 2;
+  grid-column: 3 / 5;
+}
+.grid-1 .item-5 {
+  background: purple;
+  grid-row: 2 / 4;
+}
+.grid-1 .item-6 {
+  background: yellow;
+  grid-column: 2 / span 5;
+}
+
+.grid-2 {
+  margin: 10px;
+  background: aqua;
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: 1fr 2fr 1fr;
+}
+
+.grid-2 .item-1 {
+  background: red;
+  grid-row: 2 / span 1;
+  grid-column: 3 / 4;
+}
+.grid-2 .item-2 {
+  background: blue;
+}
+.grid-2 .item-3 {
+  background: green;
+  grid-row: 2 / 3;
+}
+
+.grid-3 {
+  margin: 10px;
+  background: lemonchiffon;
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas:
+    "h h h"
+    "foo side body"
+    "foo side body"
+    "f f f";
+}
+
+.grid-3 .item-1 {
+  background: red;
+  grid-area: body;
+}
+.grid-3 .item-2 {
+  background: blue;
+  grid-area: side;
+}
+
+.grid-3 .item-3 {
+  background: green;
+  grid-area: f;
+}
+
+.grid-3 .item-4 {
+  background: purple;
+  grid-area: h;
+}
