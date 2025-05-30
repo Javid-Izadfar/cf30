@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="sayHi()">Hi</button>
+    <br />
+    <label for="first_input">Input Number</label>
+    <input type="number" id="first_input" />
+    <button onclick="calc1()">Calc + 2</button>
+    <br />
+    <button onclick="getRandom()">Get Random</button>
+    <br />
+    <button onclick="getRandomBetween(1, 200)">Get Random 2</button>
+    <br />
+    <button onclick="update()">Update</button>
+    <div id="update_area"></div>
+    <br />
+    <div onclick="update()" style="background-color: red">click me</div>
+  </body>
+  <script>
+    const sayHi = () => {
+      console.log("before");
+      alert("Hi from Jay!");
+      console.log("after");
+    };
+
+    const calc1 = () => {
+      const value = document.getElementById("first_input").value;
+
+      console.log(value);
+      console.log(value + 2);
+      console.log(2 + value);
+      console.log(+value);
+      console.log(parseInt(value));
+      console.log(parseFloat(value));
+
+      alert(+value + 2);
+    };
+
+    const getRandom = () => {
+      //   console.log(Math.floor(1.1));
+      //   console.log(Math.ceil(1.1));
+      //   console.log(Math.round(1.1));
+
+      const num = Math.floor(Math.random() * 10);
+      console.log(num);
+      return num;
+    };
+
+    const getRandomBetween = (min, max) => {
+      const num = Math.floor(Math.random() * (max - min)) + min;
+      console.log(num);
+    };
+
+    const update = () => {
+      document.getElementById("update_area").innerText = getRandom();
+      document.getElementById("update_area").style.backgroundColor = "blue";
+    };
+  </script>
+</html>
