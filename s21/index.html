@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="heads-or-tails">
+      <button onclick="flipCoin()">Flip the coin</button>
+      <div></div>
+    </div>
+    <div>
+      <button onclick="stopFirstTimeout()">Stop Timeout</button>
+    </div>
+    <div id="trivia">
+      <div>
+        <button onclick="startTrivia()">Start Trivia</button>
+      </div>
+      <div style="display: none">
+        <p>What will the following code output?</p>
+        <code>console.log(typeof null); </code>
+        <ol>
+          <li onclick="answerTrivia('object')">"object"</li>
+          <li onclick="answerTrivia('null')">"null"</li>
+          <li onclick="answerTrivia('undefined')">"undefined"</li>
+          <li onclick="answerTrivia('number')">"number"</li>
+        </ol>
+      </div>
+    </div>
+    <div id="countdown">
+      <button onclick="startCountdown()">Start Countdown</button>
+      <div></div>
+    </div>
+    <!-- <div id="stopwatch">
+      <button onclick="startCounter()">Start Counter</button>
+      <div></div>
+    </div> -->
+    <form id="first-form" onsubmit="submitForm(event)">
+      <input type="number" />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+  <script>
+    // console.log("before");
+
+    // setTimeout(() => {
+    //   console.log("inside");
+    // }, 1500);
+
+    // console.log("after");
+
+    // console.log("--------------");
+
+    const flipCoin = () => {
+      const banner = document
+        .getElementById("heads-or-tails")
+        .getElementsByTagName("div")[0];
+
+      banner.innerText = "Flipping";
+      setTimeout(() => {
+        const rand = Math.floor(Math.random() * 10);
+
+        const result = rand % 2 ? "Head" : "Tail";
+        banner.innerText = result;
+      }, 1500);
+    };
+
+    const firstTimeout = setTimeout(() => {
+      console.log("inside first timeout");
+    }, 3000);
+    clearTimeout(firstTimeout);
+
+    const stopFirstTimeout = () => {
+      clearTimeout(firstTimeout);
+    };
+
+    let triviaTimeout = null;
+    let gameInProgress = false;
+    const startTrivia = () => {
+      const triviaChildren = document
+        .getElementById("trivia")
+        .getElementsByTagName("div");
+      triviaChildren[0].style.display = "none";
+      triviaChildren[1].style.display = "block";
+      gameInProgress = true;
+      triviaTimeout = setTimeout(() => {
+        alert("Too Late. You Lost");
+        gameInProgress = false;
+      }, 30000);
+    };
+    const answerTrivia = (answer) => {
+      if (!gameInProgress) return;
+
+      clearTimeout(triviaTimeout);
+      const result = answer === typeof null;
+      alert(result ? "YEEES" : "NOOOOOOOOOO");
+      gameInProgress = false;
+    };
+
+    let remaining = 10;
+    let countdownTimeout = null;
+    const runCountdown = () => {
+      const banner = document
+        .getElementById("countdown")
+        .getElementsByTagName("div")[0];
+
+      banner.innerText = remaining;
+      remaining = remaining - 1;
+
+      if (remaining) {
+        countdownTimeout = setTimeout(() => {
+          runCountdown();
+        }, 1000);
+      } else {
+        clearTimeout(countdownTimeout);
+        banner.innerText = "Finished";
+      }
+    };
+    const startCountdown = () => {
+      if (remaining) {
+        runCountdown();
+      }
+    };
+
+    const submitForm = (e) => {
+      console.log(e);
+      console.log("inside");
+      e.preventDefault();
+      // e.stopPropagation();
+
+      const form = document.getElementById("first-form");
+      const input = form.getElementsByTagName("input")[0];
+
+      if (input.value) {
+        setTimeout(() => {
+          alert("now");
+        }, parseInt(input.value) * 1000);
+      }
+    };
+  </script>
+</html>
